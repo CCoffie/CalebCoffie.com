@@ -88,7 +88,7 @@ export const consoleInput = (initialValue, initialKeyPresses) => {
     },
     bind: {
       value,
-      onKeyPress: (event) => {
+      onKeyDown: (event) => {
           setValue(constructConsoleOutput(numKeyPresses+1));
           setNumKeyPresses(numKeyPresses+1);
       }
