@@ -34,6 +34,7 @@ const Nav = () => (
         display: flex;
         justify-content: center;
         padding: 0;
+        flex-wrap: wrap;
       }
       li {
         display: flex;
@@ -41,9 +42,17 @@ const Nav = () => (
       }
       a {
         color: #19A123;
-        /* text-decoration: none; */
-        font-size: 3em;
         font-family: monospace;
+      }
+      @media screen and (min-width: 600px) {
+        a {
+          font-size: 3vw;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        a {
+          font-size: 2em;
+        }
       }
     `}</style>
   </nav>

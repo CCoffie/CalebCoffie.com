@@ -28,6 +28,7 @@ class MyApp extends App {
             .nav-container {
               width: 100vw;
               height: 10vh;
+              overflow-y: hidden;
             }
           `}</style>
       </>
