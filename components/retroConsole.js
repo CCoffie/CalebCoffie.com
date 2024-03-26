@@ -1,13 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 const RetroConsole = (props) => {
-    const scale = Math.min(
-        props.width / 800,
-        props.height / 600
-    )
     return (
         <div id="retro-console-container" style={{
-            transform: `translate(-50%, -50%) scale(${scale})`,
+            transform: `scale(${props.scale})`,
         }}>
             <div id="main-body"></div>
             <div id="stand"></div>
@@ -37,10 +33,6 @@ const RetroConsole = (props) => {
                 width: 800px;
                 height: 600px;
                 background: black;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                transform-origin: center center;
                 text-align: center;
             }
 

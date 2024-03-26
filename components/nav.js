@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 const links = [
+  { href: '/', label: 'Home' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
   { href: 'https://www.linkedin.com/in/caleb-coffie-b71730167/', label: 'LinkedIn' },
@@ -14,14 +15,9 @@ const links = [
 const Nav = () => (
   <nav>
     <ul>
-      <li>
-        <Link href='/'>
-          <a>Home</a>
-        </Link>
-      </li>
       {links.map(({ key, href, label }) => (
         <li key={key}>
-          <a href={href}>{label}</a>
+          <Link href={href}>{label}</Link>
         </li>
       ))}
     </ul>
@@ -39,19 +35,18 @@ const Nav = () => (
       li {
         display: flex;
         padding: 1em;
-      }
-      a {
         color: #19A123;
         font-family: monospace;
+        font-size: 1.5em;
       }
       @media screen and (min-width: 600px) {
-        a {
-          font-size: 3vw;
+        li {
+          font-size: 1em;
         }
       }
       @media screen and (min-width: 1200px) {
-        a {
-          font-size: 2em;
+        li {
+          font-size: 1.5em;
         }
       }
     `}</style>
